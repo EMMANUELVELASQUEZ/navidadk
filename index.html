@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Navidad 🎄</title>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d); /* Cielo nocturno a navideño */
+            color: white;
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        /* EFECTO NIEVE */
+        .snowflake {
+            color: #fff;
+            font-size: 1em;
+            font-family: Arial;
+            text-shadow: 0 0 1px #000;
+            position: fixed;
+            top: -10%;
+            z-index: 9999;
+            user-select: none;
+            cursor: default;
+            animation-name: snowflakes-fall, snowflakes-shake;
+            animation-duration: 10s, 3s;
+            animation-timing-function: linear, ease-in-out;
+            animation-iteration-count: infinite, infinite;
+            animation-play-state: running, running;
+        }
+        @keyframes snowflakes-fall { 0% { top: -10%; } 100% { top: 100%; } }
+        @keyframes snowflakes-shake { 0% { transform: translateX(0px); } 50% { transform: translateX(80px); } 100% { transform: translateX(0px); } }
+        
+        /* Generar copos aleatorios con CSS nth-child (abreviado) */
+        .snowflake:nth-of-type(1) { left: 1%; animation-delay: 0s, 0s; }
+        .snowflake:nth-of-type(2) { left: 10%; animation-delay: 1s, 1s; }
+        .snowflake:nth-of-type(3) { left: 20%; animation-delay: 6s, .5s; }
+        .snowflake:nth-of-type(4) { left: 30%; animation-delay: 4s, 2s; }
+        .snowflake:nth-of-type(5) { left: 40%; animation-delay: 2s, 2s; }
+        .snowflake:nth-of-type(6) { left: 50%; animation-delay: 8s, 3s; }
+        .snowflake:nth-of-type(7) { left: 60%; animation-delay: 6s, 2s; }
+        .snowflake:nth-of-type(8) { left: 70%; animation-delay: 2.5s, 1s; }
+        .snowflake:nth-of-type(9) { left: 80%; animation-delay: 1s, 0s; }
+        .snowflake:nth-of-type(10) { left: 90%; animation-delay: 3s, 1.5s; }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; text-align: center; }
+        
+        h1 {
+            font-family: 'Mountains of Christmas', cursive;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px #000;
+            margin-bottom: 5px;
+        }
+        .subtitle { font-size: 1.2rem; color: #ffd700; margin-bottom: 30px; }
+
+        /* Tarjetas Navideñas */
+        .photo-card {
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+            padding: 15px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            border: 3px solid #b21f1f;
+            position: relative;
+        }
+        /* Decoración de gorrito en las fotos */
+        .photo-card::before {
+            content: '🎅';
+            position: absolute;
+            top: -20px;
+            right: -10px;
+            font-size: 40px;
+            z-index: 10;
+        }
+        .photo-card img { width: 100%; border-radius: 10px; }
+
+        .verse {
+            background: #0f3418; /* Verde navidad */
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #ffd700;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div>
+    <div class="snowflake">❆</div><div class="snowflake">❅</div><div class="snowflake">❆</div>
+    <div class="snowflake">❅</div><div class="snowflake">❆</div><div class="snowflake">❅</div>
+    <div class="snowflake">❆</div>
+
+    <div class="container">
+        <h1>🎄 Feliz Navidad Kenia 🎄</h1>
+        <p class="subtitle">Nuestra primera Navidad juntos desde el 24 de Noviembre del 2025</p>
+
+        <div class="photo-card">
+            <img src="foto1.jpg" alt="Foto Navidad 1">
+            <h3>El mejor regalo eres tú</h3>
+        </div>
+
+        <div class="photo-card" style="border-color: #0f3418;"> <img src="foto2.jpg" alt="Foto Navidad 2">
+            <h3>Juntos en estas fiestas</h3>
+        </div>
+        
+        <div class="photo-card">
+            <img src="foto3.jpg" alt="Foto Navidad 3">
+        </div>
+
+        <div class="verse">
+            <p style="font-size: 1.2rem; font-style: italic;">
+              Feliz navidad mi amor❤️
+                <br>Con mucho cariño. Te amo❤️
+            </p>
+        </div>
+        
+        <br><br>
+        <p>Te amo ❤️ - Diciembre 2025</p>
+    </div>
+
+</body>
+</html>
